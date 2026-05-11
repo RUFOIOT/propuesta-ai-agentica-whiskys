@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IA Agéntica × Comunidad Whiskys Ecuador — Oferta Exclusiva 75% OFF</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:      #0a0705;
+  --bg2:     #100c07;
+  --bg3:     #150f08;
+  --amber:   #c8781a;
+  --amber2:  #e8960a;
+  --amber3:  #f5b830;
+  --copper:  #b05a10;
+  --cream:   #f0e8d8;
+  --text:    #c8b898;
+  --muted:   #6a5840;
+  --border:  #2a1e10;
+  --border2: #3a2a16;
+  --white:   #faf5ee;
+  --red:     #c83020;
+  --green:   #4a9a50;
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  overflow-x: hidden;
+}
+
+/* ── GRAIN TEXTURE ── */
+body::before {
+  content:'';
+  position:fixed; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:9999; opacity:0.4;
+}
+
+/* ── ANNOUNCEMENT BAR ── */
+.announce {
+  background: linear-gradient(90deg, var(--amber), var(--amber2), var(--amber));
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+  text-align:center; padding:10px 20px;
+  font-size:12px; font-weight:700;
+  letter-spacing:3px; text-transform:uppercase;
+  color: var(--bg);
+}
+@keyframes shimmer { 0%{background-position:200%} 100%{background-position:-200%} }
+
+/* ── NAVBAR ── */
+nav {
+  position:fixed; top:36px; left:0; right:0; z-index:100;
+  padding:14px 50px;
+  display:flex; align-items:center; justify-content:space-between;
+  background:rgba(10,7,5,0.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid rgba(200,120,26,0.15);
+  transition:top 0.3s;
+}
+nav.no-announce { top:0; }
+.nav-brand {
+  display:flex; align-items:center; gap:10px;
+}
+.nav-logo-text {
+  font-family:'Cormorant Garamond', serif;
+  font-size:18px; font-weight:700;
+  color:var(--amber2);
+  letter-spacing:1px;
+}
+.nav-logo-sep { color:var(--muted); margin:0 4px; }
+.nav-links { display:flex; gap:28px; list-style:none; }
+.nav-links a {
+  font-size:11px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--muted); text-decoration:none;
+  transition:color 0.2s;
+}
+.nav-links a:hover { color:var(--amber2); }
+.nav-cta {
+  background:transparent;
+  border:1px solid var(--amber);
+  color:var(--amber);
+  font-size:11px; font-weight:700; letter-spacing:2px;
+  padding:8px 22px; text-decoration:none; text-transform:uppercase;
+  transition:all 0.2s;
+}
+.nav-cta:hover { background:var(--amber); color:var(--bg); }
+
+/* ── HERO ── */
+.hero {
+  min-height:100vh;
+  background:
+    linear-gradient(180deg, rgba(10,7,5,0.92) 0%, rgba(10,7,5,0.7) 40%, rgba(10,7,5,0.92) 100%),
+    url('https://images.unsplash.com/photo-1569529465841-dfecdab7503b?w=1600&q=80') center/cover no-repeat fixed;
+  display:flex; align-items:center; justify-content:center;
+  padding:120px 40px 80px;
+  position:relative; overflow:hidden;
+}
+.hero::after {
+  content:'';
+  position:absolute; bottom:0; left:0; right:0; height:120px;
+  background:linear-gradient(to bottom, transparent, var(--bg));
+}
+
+.hero-content { max-width:960px; text-align:center; position:relative; z-index:1; }
+
+.hero-community {
+  display:inline-flex; align-items:center; gap:10px;
+  background:rgba(200,120,26,0.12);
+  border:1px solid rgba(200,120,26,0.3);
+  color:var(--amber2);
+  font-size:11px; font-weight:600; letter-spacing:4px; text-transform:uppercase;
+  padding:8px 24px; margin-bottom:30px;
+  border-radius:1px;
+}
+.community-dot {
+  width:6px; height:6px; border-radius:50%;
+  background:var(--amber2);
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{transform:scale(1);opacity:1} 50%{transform:scale(1.4);opacity:0.6} }
+
+.hero h1 {
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(38px, 6vw, 80px);
+  line-height:1.05; font-weight:700;
+  color:var(--white);
+  margin-bottom:10px;
+}
+.hero h1 em { color:var(--amber2); font-style:italic; }
+
+.hero-tagline {
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(18px, 2.5vw, 26px);
+  color:var(--muted);
+  font-style:italic;
+  margin-bottom:40px;
+}
+
+/* PRICE BLOCK */
+.price-block {
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  background:rgba(10,7,5,0.8);
+  border:1px solid rgba(200,120,26,0.3);
+  border-top:3px solid var(--amber);
+  padding:30px 50px;
+  margin-bottom:36px;
+  position:relative;
+}
+.price-badge {
+  position:absolute; top:-14px; left:50%; transform:translateX(-50%);
+  background:var(--red);
+  color:#fff;
+  font-size:11px; font-weight:900; letter-spacing:3px; text-transform:uppercase;
+  padding:4px 20px;
+  white-space:nowrap;
+}
+.price-row {
+  display:flex; align-items:baseline; gap:16px;
+  margin-bottom:8px;
+}
+.price-original {
+  font-family:'Montserrat', sans-serif;
+  font-size:22px; font-weight:400;
+  color:var(--muted);
+  text-decoration:line-through;
+}
+.price-final {
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(52px, 8vw, 76px);
+  font-weight:700; line-height:1;
+  color:var(--amber2);
+}
+.price-final sup { font-size:40%; vertical-align:top; margin-top:14px; display:inline-block; }
+.price-sub {
+  font-size:12px; color:var(--muted);
+  letter-spacing:2px; text-transform:uppercase;
+}
+.savings-pill {
+  display:inline-block;
+  background:rgba(200,120,26,0.15);
+  border:1px solid rgba(200,120,26,0.3);
+  color:var(--amber2);
+  font-size:13px; font-weight:700;
+  padding:6px 20px; margin-top:12px;
+}
+
+.hero-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:40px; }
+.btn-primary {
+  background:linear-gradient(135deg, var(--amber), var(--copper));
+  color:var(--bg); font-size:13px; font-weight:700; letter-spacing:2px;
+  padding:16px 44px; text-decoration:none; text-transform:uppercase;
+  box-shadow:0 4px 30px rgba(200,120,26,0.3);
+  transition:transform 0.2s, box-shadow 0.2s;
+  border:none; cursor:pointer;
+}
+.btn-primary:hover { transform:translateY(-2px); box-shadow:0 8px 40px rgba(200,120,26,0.5); }
+.btn-outline {
+  background:transparent;
+  color:var(--cream); font-size:13px; font-weight:600; letter-spacing:2px;
+  padding:16px 44px; text-decoration:none; text-transform:uppercase;
+  border:1px solid rgba(240,232,216,0.2);
+  transition:all 0.2s;
+}
+.btn-outline:hover { border-color:var(--amber2); color:var(--amber2); }
+
+.hero-stats {
+  display:flex; justify-content:center; gap:40px; flex-wrap:wrap;
+}
+.hero-stat { text-align:center; }
+.hero-stat-val {
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(28px, 4vw, 40px);
+  font-weight:700; color:var(--amber2); line-height:1;
+}
+.hero-stat-lbl {
+  font-size:10px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--muted); margin-top:4px;
+}
+.hero-stat-sep { width:1px; background:var(--border2); align-self:stretch; }
+
+/* ── PARALLAX SECTIONS ── */
+.parallax {
+  height:300px; position:relative; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+  background-attachment:fixed;
+}
+.parallax::before {
+  content:''; position:absolute; inset:0;
+  background:linear-gradient(135deg, rgba(10,7,5,0.8), rgba(10,7,5,0.5));
+}
+.p1 { background:url('https://images.unsplash.com/photo-1527281400683-1aae777175f8?w=1600&q=80') center/cover; }
+.p2 { background:url('https://images.unsplash.com/photo-1516594915697-87eb3b1c14ea?w=1600&q=80') center/cover; }
+.p3 { background:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center/cover; }
+
+.parallax-inner { position:relative; z-index:1; text-align:center; padding:0 40px; }
+.parallax-quote {
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(22px, 3.5vw, 38px);
+  color:var(--white); line-height:1.4;
+}
+.parallax-quote em { color:var(--amber2); font-style:italic; }
+.parallax-attr {
+  font-size:11px; letter-spacing:4px; text-transform:uppercase;
+  color:var(--amber); margin-top:14px;
+}
+
+/* ── SECTIONS BASE ── */
+section { padding:80px 40px; }
+.inner { max-width:1100px; margin:0 auto; }
+.sec-eyebrow {
+  font-size:10px; letter-spacing:4px; text-transform:uppercase;
+  color:var(--amber);
+  display:flex; align-items:center; gap:12px;
+  margin-bottom:16px;
+}
+.sec-eyebrow::after {
+  content:''; flex:1; height:1px;
+  background:linear-gradient(to right, rgba(200,120,26,0.3), transparent);
+  max-width:200px;
+}
+.sec-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(30px, 4.5vw, 52px);
+  color:var(--white); line-height:1.15;
+  margin-bottom:16px;
+}
+.sec-title em { color:var(--amber2); font-style:italic; }
+.sec-sub {
+  font-size:15px; color:var(--muted);
+  max-width:680px; line-height:1.8;
+  font-weight:300; margin-bottom:50px;
+}
+
+/* ── EXCLUSIVE OFFER BANNER ── */
+.exclusive-section {
+  background:linear-gradient(135deg, rgba(200,120,26,0.1), rgba(10,7,5,0), rgba(200,120,26,0.08));
+  border-top:1px solid rgba(200,120,26,0.2);
+  border-bottom:1px solid rgba(200,120,26,0.2);
+  padding:60px 40px;
+}
+.exclusive-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:50px; align-items:center;
+}
+.exclusive-left .sec-sub { margin-bottom:30px; }
+.exclusive-pill {
+  display:inline-block;
+  background:rgba(200,120,26,0.1);
+  border:1px solid rgba(200,120,26,0.3);
+  color:var(--amber2);
+  font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase;
+  padding:6px 20px; margin-bottom:16px;
+  border-radius:1px;
+}
+.exclusive-card {
+  background:var(--bg3);
+  border:1px solid var(--border2);
+  border-top:3px solid var(--amber);
+  padding:36px;
+}
+.exclusive-card-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:24px; color:var(--white);
+  margin-bottom:20px;
+}
+.exclusive-items { list-style:none; }
+.exclusive-items li {
+  padding:10px 0 10px 22px;
+  position:relative;
+  font-size:13px; color:var(--text);
+  border-bottom:1px solid rgba(42,30,16,0.6);
+}
+.exclusive-items li:last-child { border:none; }
+.exclusive-items li::before {
+  content:'◆';
+  position:absolute; left:0;
+  color:var(--amber); font-size:8px;
+  top:13px;
+}
+.exclusive-items li strong { color:var(--white); }
+.exclusive-price-row {
+  display:flex; align-items:baseline; gap:14px;
+  margin-top:24px; padding-top:20px;
+  border-top:1px solid var(--border2);
+}
+.exc-orig { font-size:20px; color:var(--muted); text-decoration:line-through; }
+.exc-final {
+  font-family:'Cormorant Garamond', serif;
+  font-size:52px; font-weight:700;
+  color:var(--amber2); line-height:1;
+}
+.exc-final sup { font-size:40%; vertical-align:top; margin-top:8px; display:inline-block; }
+.exc-save {
+  font-size:12px; font-weight:700;
+  background:var(--red);
+  color:#fff; padding:3px 10px;
+  border-radius:2px; letter-spacing:1px;
+}
+.exc-note {
+  font-size:11px; color:var(--muted);
+  margin-top:8px; letter-spacing:1px;
+}
+
+/* ── CURRICULUM ── */
+.curriculum-section { background:var(--bg2); }
+.weeks-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:2px;
+  border:1px solid var(--border);
+}
+.week-card {
+  background:var(--bg3);
+  padding:28px;
+  border-right:1px solid var(--border);
+  position:relative;
+  opacity:0; transform:translateY(20px);
+  transition:opacity 0.5s, transform 0.5s;
+}
+.week-card.visible { opacity:1; transform:translateY(0); }
+.week-card:last-child { border-right:none; }
+.week-card:hover { background:rgba(200,120,26,0.04); }
+.week-num {
+  font-family:'Cormorant Garamond', serif;
+  font-size:64px; font-weight:700;
+  color:rgba(200,120,26,0.12);
+  line-height:1; margin-bottom:10px;
+  letter-spacing:-2px;
+}
+.week-label {
+  font-size:9px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--amber); margin-bottom:8px;
+}
+.week-title {
+  font-family:'Cormorant Garamond', serif;
+  font-size:20px; color:var(--white);
+  margin-bottom:16px; line-height:1.3;
+}
+.week-sessions { list-style:none; margin-bottom:16px; }
+.week-sessions li {
+  font-size:12px; color:var(--muted);
+  padding:4px 0 4px 14px; position:relative;
+  border-bottom:1px solid rgba(42,30,16,0.4);
+}
+.week-sessions li:last-child { border:none; }
+.week-sessions li::before {
+  content:'—'; position:absolute; left:0;
+  color:var(--amber); font-size:10px;
+}
+.week-deliverable {
+  background:rgba(200,120,26,0.07);
+  border-left:2px solid var(--amber);
+  padding:10px 14px;
+  font-size:12px; color:var(--text);
+  line-height:1.5;
+}
+.week-deliverable strong {
+  display:block; font-size:10px; letter-spacing:2px;
+  text-transform:uppercase; color:var(--amber);
+  margin-bottom:4px;
+}
+
+/* ── JARVIS SECTION ── */
+.jarvis-section { background:var(--bg); }
+.jarvis-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+  gap:16px;
+}
+.jarvis-layer {
+  background:var(--bg3);
+  border:1px solid var(--border2);
+  border-top:2px solid var(--amber);
+  padding:24px;
+  opacity:0; transform:translateX(-20px);
+  transition:opacity 0.5s, transform 0.5s;
+}
+.jarvis-layer.visible { opacity:1; transform:translateX(0); }
+.jarvis-layer:hover { border-top-color:var(--amber2); }
+.jarvis-layer-num {
+  font-family:'Cormorant Garamond', serif;
+  font-size:40px; font-weight:700;
+  color:rgba(200,120,26,0.2);
+  line-height:1; margin-bottom:8px;
+}
+.jarvis-icon { font-size:24px; margin-bottom:10px; }
+.jarvis-layer-title { font-size:15px; font-weight:700; color:var(--white); margin-bottom:8px; }
+.jarvis-layer-desc { font-size:12px; color:var(--muted); line-height:1.6; }
+
+/* ── STACK ── */
+.stack-section { background:var(--bg2); padding:70px 40px; }
+.stack-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:14px;
+}
+.stack-card {
+  background:var(--bg3);
+  border:1px solid var(--border);
+  padding:18px 20px;
+  transition:border-color 0.2s;
+}
+.stack-card:hover { border-color:rgba(200,120,26,0.3); }
+.stack-cat {
+  font-size:9px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--amber); margin-bottom:8px;
+}
+.stack-items {
+  font-size:12px; color:var(--text); line-height:1.7;
+}
+
+/* ── INSTRUCTOR ── */
+.instructor-section {
+  background:linear-gradient(135deg, var(--bg) 0%, var(--bg3) 100%);
+}
+.instructor-grid {
+  display:grid; grid-template-columns:auto 1fr;
+  gap:50px; align-items:start;
+}
+.instructor-photo {
+  width:200px; height:200px;
+  border-radius:2px;
+  background:linear-gradient(135deg, var(--bg3), var(--bg2));
+  border:1px solid var(--border2);
+  display:flex; align-items:center; justify-content:center;
+  font-size:80px;
+  flex-shrink:0;
+  box-shadow:8px 8px 0 var(--border);
+}
+.instructor-name {
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(28px, 4vw, 44px);
+  font-weight:700; color:var(--white);
+  margin-bottom:6px;
+}
+.instructor-role {
+  font-size:12px; letter-spacing:2px; color:var(--amber);
+  text-transform:uppercase; margin-bottom:20px;
+}
+.instructor-bio {
+  font-size:14px; color:var(--muted);
+  line-height:1.8; max-width:600px;
+  margin-bottom:24px; font-weight:300;
+}
+.instructor-badges {
+  display:flex; flex-wrap:wrap; gap:8px;
+}
+.inst-badge {
+  background:rgba(200,120,26,0.1);
+  border:1px solid rgba(200,120,26,0.2);
+  color:var(--amber);
+  font-size:11px; padding:5px 14px;
+  font-weight:600; letter-spacing:1px;
+}
+
+/* ── OUTCOMES ── */
+.outcomes-section { background:var(--bg3); }
+.outcomes-grid {
+  display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+  gap:2px;
+}
+.outcome-card {
+  background:var(--bg2);
+  padding:30px;
+  text-align:center;
+  border-right:1px solid var(--border);
+  opacity:0; transform:scale(0.95);
+  transition:opacity 0.5s, transform 0.5s;
+}
+.outcome-card:last-child { border:none; }
+.outcome-card.visible { opacity:1; transform:scale(1); }
+.outcome-val {
+  font-family:'Cormorant Garamond', serif;
+  font-size:clamp(40px, 6vw, 60px);
+  font-weight:700; color:var(--amber2);
+  line-height:1;
+}
+.outcome-lbl {
+  font-size:12px; color:var(--muted);
+  line-height:1.5; margin-top:8px;
+}
+
+/* ── CTA FINAL ── */
+.cta-section {
+  padding:100px 40px;
+  text-align:center;
+  background:
+    radial-gradient(ellipse at center, rgba(200,120,26,0.08) 0%, transparent 60%),
+    var(--bg);
+}
+.cta-community-badge {
+  display:inline-flex; align-items:center; gap:10px;
+  background:rgba(200,120,26,0.1);
+  border:1px solid rgba(200,120,26,0.25);
+  color:var(--amber); font-size:11px; font-weight:700;
+  letter-spacing:3px; text-transform:uppercase;
+  padding:8px 24px; margin-bottom:24px;
+}
+.cta-section .sec-title { margin-bottom:10px; }
+.cta-section .sec-sub { margin:0 auto 20px; text-align:center; }
+.cta-price-mini {
+  display:inline-flex; align-items:baseline; gap:12px;
+  margin-bottom:36px;
+}
+.cta-price-orig { font-size:18px; color:var(--muted); text-decoration:line-through; }
+.cta-price-final {
+  font-family:'Cormorant Garamond', serif;
+  font-size:56px; font-weight:700; color:var(--amber2);
+}
+.cta-price-save {
+  font-size:12px; font-weight:700;
+  background:var(--red); color:#fff;
+  padding:4px 12px; border-radius:2px;
+  letter-spacing:1px; align-self:center;
+}
+
+.whatsapp-btn {
+  display:inline-flex; align-items:center; gap:14px;
+  background:linear-gradient(135deg, #25d366, #1da851);
+  color:#fff;
+  font-size:15px; font-weight:700; letter-spacing:1px;
+  padding:20px 56px;
+  text-decoration:none; text-transform:uppercase;
+  box-shadow:0 8px 40px rgba(37,211,102,0.3);
+  animation:waPulse 2.5s ease-in-out infinite;
+  transition:transform 0.2s;
+  border-radius:2px;
+}
+.whatsapp-btn:hover { transform:translateY(-3px) scale(1.02); }
+@keyframes waPulse {
+  0%,100%{box-shadow:0 8px 40px rgba(37,211,102,0.3)}
+  50%{box-shadow:0 8px 60px rgba(37,211,102,0.55)}
+}
+.wa-icon { width:24px; height:24px; fill:#fff; }
+
+.cta-note {
+  font-size:12px; color:var(--muted);
+  margin-top:20px; letter-spacing:1px;
+}
+.cta-urgency {
+  display:inline-block;
+  font-size:12px; font-weight:700; letter-spacing:2px;
+  color:var(--red); text-transform:uppercase;
+  margin-top:16px;
+  padding:8px 24px;
+  border:1px solid rgba(200,48,32,0.3);
+  background:rgba(200,48,32,0.07);
+  animation:urgBlink 2s step-end infinite;
+}
+@keyframes urgBlink { 0%,100%{opacity:1} 50%{opacity:0.5} }
+
+/* ── TESTIMONIAL ── */
+.testimonials-section { background:var(--bg2); }
+.testimonials-grid {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+.t-card {
+  background:var(--bg3);
+  border:1px solid var(--border2);
+  border-left:3px solid var(--amber);
+  padding:28px;
+  opacity:0; transform:translateX(-20px);
+  transition:opacity 0.5s, transform 0.5s;
+}
+.t-card:nth-child(2) { transform:translateX(20px); }
+.t-card.visible { opacity:1; transform:translateX(0); }
+.t-quote {
+  font-family:'Cormorant Garamond', serif;
+  font-size:18px; font-style:italic;
+  color:var(--cream); line-height:1.6;
+  margin-bottom:16px;
+}
+.t-quote::before { content:'"'; color:var(--amber); font-size:32px; line-height:0; vertical-align:-10px; }
+.t-author { font-size:12px; font-weight:700; color:var(--amber); letter-spacing:1px; }
+.t-role   { font-size:11px; color:var(--muted); margin-top:2px; }
+
+/* ── FOOTER ── */
+footer {
+  background:#050301;
+  border-top:1px solid rgba(200,120,26,0.1);
+  padding:28px 50px;
+  display:flex; align-items:center;
+  justify-content:space-between; flex-wrap:wrap; gap:16px;
+}
+.footer-logo {
+  font-family:'Cormorant Garamond', serif;
+  font-size:16px; color:var(--amber2);
+  letter-spacing:1px;
+}
+.footer-text {
+  font-size:11px; color:var(--muted);
+  letter-spacing:1px;
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .exclusive-grid { grid-template-columns:1fr; }
+  .instructor-grid { grid-template-columns:1fr; }
+  .testimonials-grid { grid-template-columns:1fr; }
+  nav .nav-links { display:none; }
+  nav { padding:14px 20px; }
+  .hero { padding:110px 20px 70px; }
+  section { padding:60px 20px; }
+  .hero-stat-sep { display:none; }
+}
+@media(max-width:500px){
+  .weeks-grid { grid-template-columns:1fr; }
+  .week-card { border-right:none; border-bottom:1px solid var(--border); }
+  footer { flex-direction:column; text-align:center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCE BAR -->
+<div class="announce" id="announcebar">
+  🥃&nbsp;&nbsp;Beneficio exclusivo · Comunidad Whiskys Ecuador · 75% descuento · Cupos limitados&nbsp;&nbsp;🥃
+</div>
+
+<!-- NAVBAR -->
+<nav id="nav">
+  <div class="nav-brand">
+    <span class="nav-logo-text">Vibramente</span>
+    <span class="nav-logo-sep">×</span>
+    <span class="nav-logo-text" style="color:var(--text)">Whiskys Ecuador</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#oferta">Oferta</a></li>
+    <li><a href="#curriculum">Programa</a></li>
+    <li><a href="#jarvis">Jarvis</a></li>
+    <li><a href="#instructor">Instructor</a></li>
+  </ul>
+  <a href="https://wa.me/593999793094?text=Hola%20Felipe%2C%20vengo%20de%20la%20Comunidad%20Whiskys%20Ecuador%20y%20quiero%20acceder%20al%2075%25%20de%20descuento%20en%20el%20taller%20de%20IA%20Ag%C3%A9ntica" class="nav-cta">Aplicar ahora</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="hero-community">
+      <span class="community-dot"></span>
+      Oferta exclusiva · Comunidad Whiskys Ecuador
+    </div>
+
+    <h1>IA Agéntica:<br>De directivo a<br><em>orquestador.</em></h1>
+    <p class="hero-tagline">Lo que una maestría entrega en un año — en 16 horas de construcción real.</p>
+
+    <div class="price-block">
+      <div class="price-badge">🥃 75% OFF — Solo para tu comunidad</div>
+      <div class="price-row">
+        <span class="price-original">$1,200</span>
+        <span class="price-final"><sup>$</sup>300</span>
+      </div>
+      <div class="price-sub">USD · por participante · pago único</div>
+      <div class="savings-pill">💰 Ahorras $900 USD — Exclusivo para Whiskys Ecuador</div>
+    </div>
+
+    <div class="hero-btns">
+      <a href="https://wa.me/593999793094?text=Hola%20Felipe%2C%20vengo%20de%20la%20Comunidad%20Whiskys%20Ecuador%20y%20quiero%20acceder%20al%2075%25%20de%20descuento%20en%20el%20taller%20de%20IA%20Ag%C3%A9ntica" class="btn-primary">🥃 Aplicar — $300 exclusivo</a>
+      <a href="#curriculum" class="btn-outline">Ver programa completo</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-val">4</div>
+        <div class="hero-stat-lbl">Semanas</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">16</div>
+        <div class="hero-stat-lbl">Horas en vivo</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">20</div>
+        <div class="hero-stat-lbl">Cupos máx.</div>
+      </div>
+      <div class="hero-stat-sep"></div>
+      <div class="hero-stat">
+        <div class="hero-stat-val">$300</div>
+        <div class="hero-stat-lbl">Precio exclusivo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARALLAX 1 -->
+<div class="parallax p1">
+  <div class="parallax-inner">
+    <p class="parallax-quote">Como un buen whisky, la IA agéntica mejora<br>con quienes saben <em>apreciarla de verdad.</em></p>
+    <p class="parallax-attr">— AI Leadership Intensive · Vibramente 2026</p>
+  </div>
+</div>
+
+<!-- OFERTA EXCLUSIVA -->
+<section class="exclusive-section" id="oferta">
+  <div class="inner">
+    <div class="exclusive-grid">
+      <div class="exclusive-left">
+        <div class="exclusive-pill">🥃 Beneficio Comunidad Whiskys Ecuador</div>
+        <div class="sec-eyebrow">Por qué este precio</div>
+        <h2 class="sec-title">Un descuento que <em>merece</em><br>celebrarse.</h2>
+        <p class="sec-sub">La Comunidad Whiskys Ecuador es exactamente el perfil para el que fue diseñado este programa: personas con criterio, gusto por la excelencia y visión de largo plazo. Por eso, el descuento más grande que hemos dado: <strong style="color:var(--amber2)">75% sobre el precio público.</strong></p>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <div style="display:flex; align-items:center; gap:12px; font-size:13px; color:var(--text);">
+            <span style="color:var(--amber); font-size:18px;">◆</span>
+            <span>Cupos limitados — comunidad boutique, máximo 20 personas</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; font-size:13px; color:var(--text);">
+            <span style="color:var(--amber); font-size:18px;">◆</span>
+            <span>Misma calidad, mismo programa, mismo instructor — precio exclusivo</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; font-size:13px; color:var(--text);">
+            <span style="color:var(--amber); font-size:18px;">◆</span>
+            <span>Precio válido solo para miembros verificados de la comunidad</span>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; font-size:13px; color:var(--text);">
+            <span style="color:var(--amber); font-size:18px;">◆</span>
+            <span>Grupo Telegram privado exclusivo de la cohorte Whiskys Ecuador</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="exclusive-card">
+          <div class="exclusive-card-title">AI Leadership Intensive<br>Edición Whiskys Ecuador</div>
+          <ul class="exclusive-items">
+            <li><strong>16 horas en vivo</strong> + ~10 horas aplicadas</li>
+            <li><strong>Tu propio Jarvis ejecutivo</strong> funcional al finalizar</li>
+            <li><strong>Biblioteca 25+ prompts</strong> & agentes listos para usar</li>
+            <li><strong>Mentoría directa</strong> con Felipe Salgado (UNICEF · ETHDenver)</li>
+            <li><strong>Acceso permanente</strong> Vibramente Alumni</li>
+            <li><strong>Certificado + presentación</strong> ante panel ejecutivo</li>
+            <li><strong>Grupo privado</strong> cohorte Whiskys Ecuador</li>
+            <li><strong>Stack completo:</strong> Claude · GPT · Gemini · n8n · Make · MCPs</li>
+          </ul>
+          <div class="exclusive-price-row">
+            <span class="exc-orig">$1,200</span>
+            <span class="exc-final"><sup>$</sup>300</span>
+            <span class="exc-save">−75%</span>
+          </div>
+          <div class="exc-note">Precio exclusivo para Comunidad Whiskys Ecuador · Cupos limitados</div>
+          <br>
+          <a href="https://wa.me/593999793094?text=Hola%20Felipe%2C%20vengo%20de%20la%20Comunidad%20Whiskys%20Ecuador%20y%20quiero%20acceder%20al%2075%25%20de%20descuento%20en%20el%20taller%20de%20IA%20Ag%C3%A9ntica" class="btn-primary" style="display:block; text-align:center;">Aplicar ahora · $300</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARALLAX 2 -->
+<div class="parallax p2">
+  <div class="parallax-inner">
+    <p class="parallax-quote">No aprendes <em>sobre</em> IA agéntica.<br>Construyes con ella desde la primera hora.</p>
+    <p class="parallax-attr">— Metodología Vibramente · Manos al teclado</p>
+  </div>
+</div>
+
+<!-- CURRICULUM -->
+<section class="curriculum-section" id="curriculum">
+  <div class="inner">
+    <div class="sec-eyebrow">Malla curricular completa</div>
+    <h2 class="sec-title">Cuatro semanas.<br><em>Una progresión sin huecos.</em></h2>
+    <p class="sec-sub">Cada semana entrega un activo concreto que se acumula hacia el proyecto final: tu Jarvis ejecutivo personal. Sin teoría que no aplique de inmediato. 75% del tiempo en vivo es construcción.</p>
+
+    <div class="weeks-grid">
+
+      <div class="week-card" data-anim>
+        <div class="week-num">01</div>
+        <div class="week-label">Semana 1 · 4 horas</div>
+        <div class="week-title">Fundamentos + Setup profesional del workspace</div>
+        <ul class="week-sessions">
+          <li><strong>Sesión 1.1</strong> · Cómo funciona realmente la IA moderna — LLMs, tokens, contexto, temperatura. Matriz de decisión: Claude vs GPT vs Gemini vs Perplexity</li>
+          <li><strong>Sesión 1.2</strong> · Setup del workspace ejecutivo — Claude Projects, Custom GPTs, conectores Gmail/Drive/Outlook/Notion/Slack. Seguridad y privacidad corporativa</li>
+        </ul>
+        <div class="week-deliverable">
+          <strong>Entregable</strong>
+          Tres proyectos personalizados configurados y operando: estratégico, operativo y de comunicación.
+        </div>
+      </div>
+
+      <div class="week-card" data-anim>
+        <div class="week-num">02</div>
+        <div class="week-label">Semana 2 · 4 horas</div>
+        <div class="week-title">Prompting profesional + IA agéntica</div>
+        <ul class="week-sessions">
+          <li><strong>Sesión 2.1</strong> · Prompting profesional ejecutivo — chain-of-thought, few-shot, role prompting. Biblioteca personal por dominio: estrategia, finanzas, ventas, RRHH</li>
+          <li><strong>Sesión 2.2</strong> · IA agéntica · de asistente a fuerza digital — loop percibir-planear-actuar. MCPs: el protocolo que conecta IA con todo. Claude para Chrome</li>
+        </ul>
+        <div class="week-deliverable">
+          <strong>Entregable</strong>
+          Biblioteca de 20+ prompts ejecutivos validados + tu primer agente ejecutando una tarea real.
+        </div>
+      </div>
+
+      <div class="week-card" data-anim>
+        <div class="week-num">03</div>
+        <div class="week-label">Semana 3 · 4 horas</div>
+        <div class="week-title">Automatización + Skills + Conocimiento corporativo</div>
+        <ul class="week-sessions">
+          <li><strong>Sesión 3.1</strong> · Automatización con n8n y Make — triggers, workflows con LLMs, webhooks. Casos: triaje de correo, lead scoring, reportes diarios automáticos</li>
+          <li><strong>Sesión 3.2</strong> · Skills, RAG & liderazgo de IA — conocimiento corporativo seguro, métricas reales de ROI, orquestar equipos humanos + digitales</li>
+        </ul>
+        <div class="week-deliverable">
+          <strong>Entregable</strong>
+          Dos automatizaciones funcionando en n8n/Make + un skill personalizado con base de conocimiento.
+        </div>
+      </div>
+
+      <div class="week-card" data-anim>
+        <div class="week-num">04</div>
+        <div class="week-label">Semana 4 · 4 hrs + panel</div>
+        <div class="week-title">Proyecto final · Tu Jarvis ejecutivo</div>
+        <ul class="week-sessions">
+          <li><strong>Sesión 4.1</strong> · Construcción guiada del Jarvis en vivo — 6 capas: identidad, conocimiento, herramientas, sub-agentes, automatizaciones, gobernanza</li>
+          <li><strong>Sesión 4.2</strong> · Demo ante panel ejecutivo invitado — 3 casos de uso reales + feedback + hoja de ruta personal a 90 días + Certificación</li>
+        </ul>
+        <div class="week-deliverable">
+          <strong>Entregable final</strong>
+          Tu Jarvis ejecutivo funcional y documentado. Propiedad tuya. Operativo el lunes siguiente.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PARALLAX 3 -->
+<div class="parallax p3">
+  <div class="parallax-inner">
+    <p class="parallax-quote">Al final del programa no te vas con conocimiento.<br>Te vas con un <em>activo que trabaja por ti.</em></p>
+    <p class="parallax-attr">— Tu Jarvis ejecutivo · propiedad tuya · funcionando</p>
+  </div>
+</div>
+
+<!-- JARVIS LAYERS -->
+<section class="jarvis-section" id="jarvis">
+  <div class="inner">
+    <div class="sec-eyebrow">Proyecto final</div>
+    <h2 class="sec-title">Tu propio Jarvis<br><em>en seis capas funcionales.</em></h2>
+    <p class="sec-sub">No es un slogan. Es la arquitectura real de un asistente ejecutivo de nivel profesional, integrado a tu correo, calendario, base de conocimiento y herramientas críticas. Funcionando el lunes siguiente.</p>
+
+    <div class="jarvis-grid">
+      <div class="jarvis-layer" data-anim>
+        <div class="jarvis-layer-num">01</div>
+        <div class="jarvis-icon">◇</div>
+        <div class="jarvis-layer-title">Identidad & Contexto</div>
+        <div class="jarvis-layer-desc">Instrucciones de sistema personalizadas, perfil ejecutivo, prioridades estratégicas, estilo de comunicación. Tu agente sabe quién eres.</div>
+      </div>
+      <div class="jarvis-layer" data-anim>
+        <div class="jarvis-layer-num">02</div>
+        <div class="jarvis-icon">▤</div>
+        <div class="jarvis-layer-title">Conocimiento Corporativo</div>
+        <div class="jarvis-layer-desc">Documentos de tu empresa, OKRs, organigrama, contactos clave, histórico de decisiones. Tu base de conocimiento privada y segura.</div>
+      </div>
+      <div class="jarvis-layer" data-anim>
+        <div class="jarvis-layer-num">03</div>
+        <div class="jarvis-icon">⚙</div>
+        <div class="jarvis-layer-title">Herramientas Activas</div>
+        <div class="jarvis-layer-desc">Lectura y redacción de correo, gestión de calendario, búsqueda web, análisis de archivos en vivo. Conectado a tus sistemas reales.</div>
+      </div>
+      <div class="jarvis-layer" data-anim>
+        <div class="jarvis-layer-num">04</div>
+        <div class="jarvis-icon">⌬</div>
+        <div class="jarvis-layer-title">Sub-agentes Especializados</div>
+        <div class="jarvis-layer-desc">Agente de investigación, agente de redacción ejecutiva, agente de análisis financiero, agente de briefings. Cada uno optimizado para su rol.</div>
+      </div>
+      <div class="jarvis-layer" data-anim>
+        <div class="jarvis-layer-num">05</div>
+        <div class="jarvis-icon">↻</div>
+        <div class="jarvis-layer-title">Automatizaciones</div>
+        <div class="jarvis-layer-desc">Rutinas matutinas (resumen del día), seguimiento de pendientes, alertas de prioridad real. Trabaja mientras tú duermes.</div>
+      </div>
+      <div class="jarvis-layer" data-anim>
+        <div class="jarvis-layer-num">06</div>
+        <div class="jarvis-icon">⊘</div>
+        <div class="jarvis-layer-title">Gobernanza & Control</div>
+        <div class="jarvis-layer-desc">Límites de acción autónoma, protocolos de escalación a humano, registro de decisiones tomadas. Tú siempre en control.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STACK -->
+<section class="stack-section">
+  <div class="inner">
+    <div class="sec-eyebrow">Stack tecnológico</div>
+    <h2 class="sec-title">Agnóstico de proveedor.<br><em>Profundo en cada herramienta.</em></h2>
+    <p class="sec-sub" style="margin-bottom:36px;">No es "el curso de Claude" ni "el curso de OpenAI". Cada herramienta se trabaja con la profundidad necesaria para operar sin atadura a un solo proveedor.</p>
+    <div class="stack-grid">
+      <div class="stack-card"><div class="stack-cat">Modelos LLM</div><div class="stack-items">Claude · ChatGPT · Gemini · Perplexity · Llama</div></div>
+      <div class="stack-card"><div class="stack-cat">Plataformas</div><div class="stack-items">Claude.ai · Projects · Custom GPTs · Claude para Chrome</div></div>
+      <div class="stack-card"><div class="stack-cat">Automatización</div><div class="stack-items">n8n · Make · Zapier · Webhooks · APIs REST</div></div>
+      <div class="stack-card"><div class="stack-cat">Protocolos</div><div class="stack-items">MCP · Model Context Protocol · OAuth · OpenAPI</div></div>
+      <div class="stack-card"><div class="stack-cat">Agentes</div><div class="stack-items">Claude Agents · Custom GPTs · frameworks abiertos</div></div>
+      <div class="stack-card"><div class="stack-cat">Productividad</div><div class="stack-items">Claude para Excel · PowerPoint · Notion AI · Cowork</div></div>
+      <div class="stack-card"><div class="stack-cat">Research IA</div><div class="stack-items">Perplexity · Deep Research · Claude Research Mode</div></div>
+      <div class="stack-card"><div class="stack-cat">Conocimiento</div><div class="stack-items">RAG · vectorización · skills personalizados · bases privadas</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section class="instructor-section" id="instructor">
+  <div class="inner">
+    <div class="sec-eyebrow">El instructor</div>
+    <div class="instructor-grid">
+      <div class="instructor-photo">🧑‍💻</div>
+      <div>
+        <h2 class="instructor-name">Felipe Salgado</h2>
+        <div class="instructor-role">CEO · Vibramente · Arquitecto de soluciones agénticas</div>
+        <p class="instructor-bio">
+          Felipe combina 8+ años en blockchain con capacidad técnica real (Python, ML, bots, scraping) y visión estratégica de negocio. Asesora actualmente a UNICEF Chile en mecanismos globales de fundraising aplicando IA, blockchain y automatización. Es mentor de hackers en ETHDenver ediciones 2023 y 2025 — el hackathon de Ethereum más grande del mundo.<br><br>
+          Fue finalista de la Startup World Cup 2023 en Silicon Valley, asesor tecnológico de Eugenio Derbez (2019–2021), y ha ejecutado más de 20 proyectos Web3 e IA en producción para empresas en Ecuador, Latinoamérica y USA. Fundador de la primera escuela de IA y Blockchain del Ecuador.
+        </p>
+        <div class="instructor-badges">
+          <span class="inst-badge">🌍 UNICEF Chile · Asesor IA</span>
+          <span class="inst-badge">🔷 ETHDenver Mentor ×2</span>
+          <span class="inst-badge">🏅 Startup World Cup · SF 2023</span>
+          <span class="inst-badge">⛓️ 8+ años Blockchain</span>
+          <span class="inst-badge">🎬 Asesor Eugenio Derbez</span>
+          <span class="inst-badge">🚀 1ra Escuela IA Ecuador</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section class="outcomes-section">
+  <div class="inner">
+    <div class="sec-eyebrow" style="justify-content:center;">Impacto medible</div>
+    <h2 class="sec-title" style="text-align:center; margin-bottom:10px;">Lo que reportan participantes<br><em>a 90 días del programa.</em></h2>
+    <p class="sec-sub" style="text-align:center; margin:0 auto 50px;">Benchmarks observados en cohortes equivalentes.</p>
+    <div class="outcomes-grid">
+      <div class="outcome-card" data-anim>
+        <div class="outcome-val">70%</div>
+        <div class="outcome-lbl">Reducción de tiempo en redacción ejecutiva</div>
+      </div>
+      <div class="outcome-card" data-anim>
+        <div class="outcome-val">60%</div>
+        <div class="outcome-lbl">Menos tiempo en preparación de reuniones</div>
+      </div>
+      <div class="outcome-card" data-anim>
+        <div class="outcome-val">5×</div>
+        <div class="outcome-lbl">Velocidad de respuesta a correos críticos</div>
+      </div>
+      <div class="outcome-card" data-anim>
+        <div class="outcome-val">25h</div>
+        <div class="outcome-lbl">Horas semanales liberadas del equipo</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <div class="inner">
+    <div class="sec-eyebrow">Casos reales</div>
+    <h2 class="sec-title">La metodología ya está<br><em>cambiando empresas.</em></h2>
+    <p class="sec-sub" style="margin-bottom:36px;">Testimonios de clientes reales de Vibramente.</p>
+    <div class="testimonials-grid">
+      <div class="t-card" data-anim>
+        <p class="t-quote"> Desde que implementamos IA agéntica, estamos transformando los procesos internos de la compañía. Pensamos en una expansión internacional y sabemos que tenemos el servicio al cliente más personalizado en el sector de motocicletas del Ecuador. Tener una estrategia agéntica cambió las reglas del juego.</p>
+        <div class="t-author">Elisa Salgado</div>
+        <div class="t-role">CEO · Club Los Chillos</div>
+      </div>
+      <div class="t-card" data-anim>
+        <p class="t-quote"> Desde que implementamos IA agéntica, hemos desarrollado estrategias que harán ahorrar a la compañía miles de dólares al año. Temas de gastos y operaciones que antes tomaban mucho tiempo y recursos, ahora los hacemos en minutos.</p>
+        <div class="t-author">Directivo Saludsa</div>
+        <div class="t-role">Empresa líder de salud · Ecuador</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-section" id="aplicar">
+  <div class="inner" style="max-width:750px; margin:0 auto;">
+    <div class="cta-community-badge">
+      🥃 Comunidad Whiskys Ecuador · Oferta exclusiva
+    </div>
+    <h2 class="sec-title" style="text-align:center;">¿Listo para llevar<br>tu dirección a otro <em>nivel?</em></h2>
+    <p class="sec-sub" style="text-align:center; margin:0 auto 28px;">Este precio nunca ha existido antes. El 75% de descuento es un reconocimiento a una comunidad que valora la excelencia. No estará disponible después del cierre de esta cohorte.</p>
+
+    <div class="cta-price-mini">
+      <span class="cta-price-orig">$1,200</span>
+      <span class="cta-price-final">$300</span>
+      <span class="cta-price-save">75% OFF</span>
+    </div>
+
+    <div style="text-align:center;">
+      <a href="https://wa.me/593999793094?text=Hola%20Felipe%2C%20vengo%20de%20la%20Comunidad%20Whiskys%20Ecuador%20y%20quiero%20acceder%20al%2075%25%20de%20descuento%20en%20el%20taller%20de%20IA%20Ag%C3%A9ntica" class="whatsapp-btn">
+        <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Aplicar ahora · $300 USD
+      </a>
+      <p class="cta-note">+593 999 793 094 · Respuesta inmediata · Menciona "Whiskys Ecuador"</p>
+      <div class="cta-urgency">⚠ Cupos limitados — comunidad boutique máx. 20 personas</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Vibramente × Whiskys Ecuador</div>
+  <div class="footer-text">AI Leadership Intensive · Edición Exclusiva 2026</div>
+  <div class="footer-text">$300 USD · 75% OFF · Solo para la comunidad</div>
+</footer>
+
+<script>
+// Announce bar scroll
+const ann = document.getElementById('announcebar');
+const navEl = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 44) navEl.classList.add('no-announce');
+  else navEl.classList.remove('no-announce');
+});
+
+// Intersection observer animations
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if(e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('visible'), i * 80);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('[data-anim]').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
